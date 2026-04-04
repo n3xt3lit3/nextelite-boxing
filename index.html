@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NextElite</title>
+  <!-- l1ft0ff — Mission Tri-Ferg — exp-14 -->
+  <!-- Palace energy. Five words. That's the whole site. -->
+  <!-- If you're reading this, you're paying attention. Good. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #FFFFFF;
+      color: #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      min-height: 100dvh;
+    }
+
+    /* === FLASH EASTER EGG === */
+    body.flash {
+      animation: bgFlash 0.5s ease;
+    }
+
+    @keyframes bgFlash {
+      0% { background: #FFFFFF; }
+      30% { background: #CDDC39; }
+      100% { background: #FFFFFF; }
+    }
+
+    /* === NAV CONTAINER === */
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(16px, 3vw, 48px);
+      flex-wrap: wrap;
+      padding: 0 24px;
+      flex: 1;
+      align-content: center;
+    }
+
+    /* === NAV ITEM === */
+    .nav-item {
+      position: relative;
+      text-align: center;
+      cursor: pointer;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 clamp(12px, 2vw, 32px);
+      min-height: 80px;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+
+    .nav-item .label,
+    .nav-item .hover-label {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(24px, 3.5vw, 52px);
+      text-transform: uppercase;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .nav-item .label {
+      opacity: 1;
+    }
+
+    .nav-item .hover-label {
+      position: absolute;
+      opacity: 0;
+      transform: scale(0.95);
+    }
+
+    /* Hover: swap text */
+    .nav-item:hover .label,
+    .nav-item:focus .label {
+      opacity: 0;
+      transform: scale(1.05);
+    }
+
+    .nav-item:hover .hover-label,
+    .nav-item:focus .hover-label {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Hover: scale up hovered item */
+    .nav-item:hover,
+    .nav-item:focus {
+      transform: scale(1.05);
+    }
+
+    /* When ANY item is hovered, fade the others */
+    .nav:hover .nav-item {
+      opacity: 0.4;
+    }
+
+    .nav:hover .nav-item:hover,
+    .nav:hover .nav-item:focus {
+      opacity: 1;
+    }
+
+    /* === COLORS === */
+    .nav-item[data-id="boxing"] { color: #CC2936; }
+    .nav-item[data-id="tagteach"] { color: #1B2A4A; }
+    .nav-item[data-id="space"] { color: #1a1a1a; }
+    .nav-item[data-id="schedule"] { color: #CDDC39; }
+    .nav-item[data-id="n3xt3lit3"] { color: #D5D5D5; }
+
+    /* === FOOTER === */
+    footer {
+      width: 100%;
+      padding: 24px 0 28px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(16px, 3vw, 40px);
+      flex-wrap: wrap;
+    }
+
+    .footer-row a,
+    .footer-row span {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #888;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      min-height: 44px;
+      min-width: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-row a:hover {
+      color: #1a1a1a;
+    }
+
+    /* === MOBILE === */
+    @media (max-width: 768px) {
+      html, body {
+        overflow: auto;
+      }
+
+      body {
+        min-height: 100vh;
+        min-height: 100dvh;
+      }
+
+      .nav {
+        gap: 12px 24px;
+        padding: 0 16px;
+      }
+
+      .nav-item {
+        width: clamp(120px, 40vw, 180px);
+      }
+
+      .nav-item .label,
+      .nav-item .hover-label {
+        font-size: clamp(32px, 10vw, 48px);
+      }
+    }
+
+    @media (max-width: 375px) {
+      .nav-item {
+        width: 100%;
+      }
+
+      .nav-item .label,
+      .nav-item .hover-label {
+        font-size: clamp(28px, 12vw, 42px);
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- Mission Tri-Ferg. Five shapes. Five doors. Choose. -->
+
+<nav class="nav" aria-label="Main navigation">
+  <!-- 1. BOXING — red -->
+  <a href="boxing.html" class="nav-item" data-id="boxing" role="link" aria-label="Boxing">
+    <span class="label">BOXING</span>
+    <span class="hover-label" aria-hidden="true">GLOVES ON</span>
+  </a>
+
+  <!-- 2. TAGTEACH — navy -->
+  <a href="tagteach.html" class="nav-item" data-id="tagteach" role="link" aria-label="TagTeach">
+    <span class="label">TAGTEACH</span>
+    <span class="hover-label" aria-hidden="true">CLICK.</span>
+  </a>
+
+  <!-- 3. THE SPACE — black -->
+  <a href="the-space.html" class="nav-item" data-id="space" role="link" aria-label="The Space">
+    <span class="label">THE SPACE</span>
+    <span class="hover-label" aria-hidden="true">THE GYM</span>
+  </a>
+
+  <!-- 4. SCHEDULE — neon -->
+  <a href="schedule.html" class="nav-item" data-id="schedule" role="link" aria-label="Schedule">
+    <span class="label">SCHEDULE</span>
+    <span class="hover-label" aria-hidden="true">SHOW UP</span>
+  </a>
+
+  <!-- 5. N3XT3LIT3 — gray. the quiet one. -->
+  <a href="n3xt3lit3.html" class="nav-item" data-id="n3xt3lit3" role="link" aria-label="NextElite">
+    <span class="label">N3XT3LIT3</span>
+    <span class="hover-label" aria-hidden="true">DANGEROUS</span>
+  </a>
+</nav>
+
+<!-- <333 xxx n3xt3lit3 -->
+<footer>
+  <div class="footer-row">
+    <a href="https://x.com/N3XT3LIT3">X</a>
+  </div>
+  <div class="footer-row">
+    <a href="#mailing">MAILING LIST</a>
+    <span>BORING STUFF</span>
+  </div>
+</footer>
+<!-- you found the boring stuff. congrats. -->
+
+<script>
+  // l1ft0ff — Mission Tri-Ferg — exp-14
+  // "Five doors. No descriptions. No apologies."
+  console.log('%c N3XT3LIT3 ', 'background: #1a1a1a; color: #CDDC39; font-size: 16px; font-weight: bold; padding: 8px 16px;');
+  console.log('%c not here to be pretty. ', 'color: #888; font-size: 12px;');
+  console.log('%c try hovering all five. fast. ', 'color: #D5D5D5; font-size: 10px;');
+
+  // Easter egg: hover all 5 within 3 seconds → flash neon
+  (function() {
+    const items = document.querySelectorAll('.nav-item');
+    const hovered = new Set();
+    let firstHoverTime = null;
+
+    items.forEach(function(item) {
+      item.addEventListener('mouseenter', function() {
+        const id = item.getAttribute('data-id');
+
+        if (hovered.size === 0) {
+          firstHoverTime = Date.now();
+        }
+
+        hovered.add(id);
+
+        if (hovered.size === 5) {
+          const elapsed = Date.now() - firstHoverTime;
+          if (elapsed <= 3000) {
+            document.body.classList.add('flash');
+            console.log('%c ACHIEVEMENT UNLOCKED ', 'background: #CDDC39; color: #1a1a1a; font-size: 14px; font-weight: bold; padding: 4px 12px;');
+            console.log('%c you hovered them all. respect. ', 'color: #888; font-size: 11px;');
+            setTimeout(function() {
+              document.body.classList.remove('flash');
+            }, 600);
+          }
+          // Reset
+          hovered.clear();
+          firstHoverTime = null;
+        }
+      });
+    });
+
+    // Reset if too slow (timeout after 3s from first hover)
+    setInterval(function() {
+      if (firstHoverTime && Date.now() - firstHoverTime > 3000) {
+        hovered.clear();
+        firstHoverTime = null;
+      }
+    }, 500);
+  })();
+</script>
+</body>
+</html>
