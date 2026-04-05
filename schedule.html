@@ -325,9 +325,59 @@
         left: 16px;
       }
     }
-  @media (max-width: 768px) { .hero h1 { font-size: clamp(28px, 8vw, 40px) !important; } .hero .subtitle { font-size: 14px !important; } .photo-grid, .equip-grid { grid-template-columns: 1fr !important; } .equip-card img, .photo-card img { height: 250px !important; } .back { font-size: 11px !important; top: 12px !important; left: 12px !important; } section, .about, .walls, .statement { padding: 40px 20px !important; } .walls-grid { flex-direction: column !important; gap: 12px !important; } .footer-row { gap: 16px !important; } } </style>
+  @media (max-width: 768px) { .hero h1 { font-size: clamp(28px, 8vw, 40px) !important; } .hero .subtitle { font-size: 14px !important; } .photo-grid, .equip-grid { grid-template-columns: 1fr !important; } .equip-card img, .photo-card img { height: 250px !important; } .back { font-size: 11px !important; top: 12px !important; left: 12px !important; } section, .about, .walls, .statement { padding: 40px 20px !important; } .walls-grid { flex-direction: column !important; gap: 12px !important; } .footer-row { gap: 16px !important; } } 
+    /* === MOBILE GATE === */
+    .mobile-gate {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: #FFFFFF;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .mobile-gate h1 {
+      font-family: "Archivo Black", sans-serif;
+      font-size: 28px;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+      line-height: 1.1;
+    }
+
+    .mobile-gate p {
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 13px;
+      color: #888;
+      margin-top: 16px;
+      letter-spacing: 0.04em;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-gate {
+        display: flex;
+      }
+
+      body > *:not(.mobile-gate) {
+        display: none !important;
+      }
+    }
+  </style>
 </head>
 <body>
+
+<!-- Mobile gate -->
+<div class="mobile-gate" aria-label="Desktop only notice">
+  <h1>DESKTOP<br>EXPERIENCE</h1>
+  <p>open on a computer.</p>
+</div>
+
+
 <!-- l1ft0ff — the hardest round is the one before you start. open the door. -->
 
 <a href="index.html" class="back" aria-label="Back to main navigation">&larr; BACK</a>
