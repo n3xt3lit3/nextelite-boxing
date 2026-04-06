@@ -159,57 +159,47 @@
       color: #1a1a1a;
     }
 
-    /* === MOBILE GATE === */
-    .mobile-gate {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      background: #FFFFFF;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 40px;
-    }
-
-    .mobile-gate h1 {
-      font-family: 'Archivo Black', sans-serif;
-      font-size: 28px;
-      text-transform: uppercase;
-      letter-spacing: -0.02em;
-      color: #1a1a1a;
-      line-height: 1.1;
-    }
-
-    .mobile-gate p {
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
-      font-size: 13px;
-      color: #888;
-      margin-top: 16px;
-      letter-spacing: 0.04em;
-    }
-
+    /* === MOBILE === */
     @media (max-width: 768px) {
-      .mobile-gate {
-        display: flex;
+      html, body {
+        overflow: auto;
       }
 
-      .nav, footer {
-        display: none;
+      body {
+        min-height: 100vh;
+        min-height: 100dvh;
+      }
+
+      .nav {
+        gap: 12px 24px;
+        padding: 0 16px;
+      }
+
+      .nav-item {
+        width: clamp(120px, 40vw, 180px);
+      }
+
+      .nav-item .label,
+      .nav-item .hover-label {
+        font-size: clamp(32px, 10vw, 48px);
+      }
+    }
+
+    @media (max-width: 375px) {
+      .nav-item {
+        width: 100%;
+      }
+
+      .nav-item .label,
+      .nav-item .hover-label {
+        font-size: clamp(28px, 12vw, 42px);
       }
     }
   </style>
 </head>
 <body>
-<!-- Mobile gate -->
-<div class="mobile-gate" aria-label="Desktop only notice">
-  <h1>DESKTOP<br>EXPERIENCE</h1>
-  <p>open on a computer.</p>
-</div>
-
 <!-- Mission Tri-Ferg. Five shapes. Five doors. Choose. -->
+<!-- l1ft0ff — Mission Haymaker — mobile routing added -->
 
 <nav class="nav" aria-label="Main navigation">
   <!-- 1. BOXING — red -->
@@ -256,8 +246,19 @@
 <!-- you found the boring stuff. congrats. -->
 
 <script>
-  // l1ft0ff — Mission Tri-Ferg — exp-14
+  // l1ft0ff — Mission Tri-Ferg + Haymaker — mobile routing
   // "Five doors. No descriptions. No apologies."
+
+  // Route mobile users to mobile-native boxing page
+  (function() {
+    var isMobile = /Android|iPhone|iPad|iPod|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (window.innerWidth <= 768);
+    if (isMobile) {
+      var boxingLink = document.querySelector('.nav-item[data-id="boxing"]');
+      if (boxingLink) {
+        boxingLink.setAttribute('href', 'boxing-mobile.html');
+      }
+    }
+  })();
   console.log('%c N3XT3LIT3 ', 'background: #1a1a1a; color: #CDDC39; font-size: 16px; font-weight: bold; padding: 8px 16px;');
   console.log('%c not here to be pretty. ', 'color: #888; font-size: 12px;');
   console.log('%c try hovering all five. fast. ', 'color: #D5D5D5; font-size: 10px;');
