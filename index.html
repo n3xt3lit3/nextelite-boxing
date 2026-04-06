@@ -251,10 +251,10 @@
 
   // Route mobile users to mobile-native pages — Mission Constellation
   (function() {
-    var isMobile = /Android|iPhone|iPad|iPod|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (window.innerWidth <= 768);
+    var isMobile = false; // mobile version in development
     if (isMobile) {
       // Redirect to dedicated mobile index
-      window.location.href = 'index-mobile.html';
+      // window.location.href = 'index-mobile.html'; // disabled until mobile is approved
       return;
     }
   })();
