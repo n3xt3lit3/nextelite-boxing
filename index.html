@@ -249,14 +249,13 @@
   // l1ft0ff — Mission Tri-Ferg + Haymaker — mobile routing
   // "Five doors. No descriptions. No apologies."
 
-  // Route mobile users to mobile-native boxing page
+  // Route mobile users to mobile-native pages — Mission Constellation
   (function() {
     var isMobile = /Android|iPhone|iPad|iPod|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (window.innerWidth <= 768);
     if (isMobile) {
-      var boxingLink = document.querySelector('.nav-item[data-id="boxing"]');
-      if (boxingLink) {
-        boxingLink.setAttribute('href', 'boxing-mobile.html');
-      }
+      // Redirect to dedicated mobile index
+      window.location.href = 'index-mobile.html';
+      return;
     }
   })();
   console.log('%c N3XT3LIT3 ', 'background: #1a1a1a; color: #CDDC39; font-size: 16px; font-weight: bold; padding: 8px 16px;');

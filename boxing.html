@@ -314,11 +314,13 @@
 </head>
 <body>
 
-<!-- Mobile gate -->
-<div class="mobile-gate" aria-label="Desktop only notice">
-  <h1>DESKTOP<br>EXPERIENCE</h1>
-  <p>open on a computer.</p>
-</div>
+<!-- l1ft0ff — Mission Constellation — mobile redirect -->
+<script>
+  (function() {
+    var isMobile = /Android|iPhone|iPad|iPod|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (window.innerWidth <= 768);
+    if (isMobile) { window.location.href = 'boxing-mobile.html'; }
+  })();
+</script>
 
 
 <!-- l1ft0ff — the ring remembers. do you? -->
