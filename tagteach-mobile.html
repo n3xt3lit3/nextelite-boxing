@@ -8,6 +8,8 @@
 <title>TAGTEACH — N3XT3LIT3</title>
 <!-- l1ft0ff — Mission Constellation — tagteach mobile -->
 <!-- the click is information. nothing more. nothing less. -->
+<!-- l1ft0ff — Mission Babel — i18n added -->
+<link rel="stylesheet" href="lang-toggle.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -18,6 +20,13 @@
 
 <!-- l1ft0ff — the tag point is the smallest piece. the smallest piece is everything. -->
 
+<!-- l1ft0ff — Mission Babel — language toggle -->
+<div class="lang-toggle lang-toggle--mobile" aria-label="Language selector">
+  <button class="lang-btn" data-lang-btn="no">NO</button>
+  <span class="lang-sep">/</span>
+  <button class="lang-btn active" data-lang-btn="en">EN</button>
+</div>
+
 <!-- ============================================
      HERO — full bleed, navy energy
      ============================================ -->
@@ -26,8 +35,8 @@
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <h1 class="hero-title">TAGTEACH</h1>
-    <p class="hero-sub">click.</p>
+    <h1 class="hero-title" data-i18n="page-title-tagteach">TAGTEACH</h1>
+    <p class="hero-sub" data-i18n="tagteach-subtitle">click.</p>
   </div>
   <div class="hero-scroll-hint" aria-hidden="true">
     <span class="scroll-arrow"></span>
@@ -39,7 +48,7 @@
      INTRO
      ============================================ -->
 <section class="intro fade-in">
-  <p>precision feedback. one click at a time. tagteach applies clicker training principles to human coaching. the tag point is the smallest piece of behavior that matters.</p>
+  <p data-i18n="tagteach-intro">precision feedback. one click at a time. tagteach applies clicker training principles to human coaching. the tag point is the smallest piece of behavior that matters.</p>
 </section>
 
 
@@ -47,27 +56,27 @@
      PHOTO GALLERY — swipeable
      ============================================ -->
 <section class="gallery-section" aria-label="TagTeach photos">
-  <h2 class="section-label section-label--tagteach fade-in">THE METHOD</h2>
+  <h2 class="section-label section-label--tagteach fade-in" data-i18n="mobile-gallery-method">THE METHOD</h2>
   <div class="gallery" role="region" aria-label="Swipeable photo gallery" tabindex="0">
     <div class="gallery-track">
       <div class="gallery-slide">
         <div class="gallery-photo" role="img" aria-label="Kriger with red Kong toy" style="background-image: url('img/gym-6227.jpg'); background-size: cover; background-position: center;">
-          <span class="photo-caption">the marker</span>
+          <span class="photo-caption" data-i18n="caption-marker">the marker</span>
         </div>
       </div>
       <div class="gallery-slide">
         <div class="gallery-photo" role="img" aria-label="Kriger with Kong and strike pad" style="background-image: url('img/gym-6240.jpg'); background-size: cover; background-position: center;">
-          <span class="photo-caption">the bridge</span>
+          <span class="photo-caption" data-i18n="caption-bridge">the bridge</span>
         </div>
       </div>
       <div class="gallery-slide">
         <div class="gallery-photo" role="img" aria-label="Kriger down the corridor" style="background-image: url('img/gym-6251.jpg'); background-size: cover; background-position: center;">
-          <span class="photo-caption">the focus</span>
+          <span class="photo-caption" data-i18n="caption-focus">the focus</span>
         </div>
       </div>
       <div class="gallery-slide">
         <div class="gallery-photo" role="img" aria-label="Tripod for video analysis" style="background-image: url('img/gym-6312.jpg'); background-size: cover; background-position: center;">
-          <span class="photo-caption">the review</span>
+          <span class="photo-caption" data-i18n="caption-review">the review</span>
         </div>
       </div>
     </div>
@@ -78,7 +87,7 @@
     <span class="dot"></span>
     <span class="dot"></span>
   </div>
-  <p class="swipe-hint fade-in">swipe</p>
+  <p class="swipe-hint fade-in" data-i18n="mobile-swipe">swipe</p>
 </section>
 
 
@@ -86,29 +95,29 @@
      HOW IT WORKS — 3 steps
      ============================================ -->
 <section class="list-section" id="method">
-  <h2 class="section-label section-label--tagteach fade-in">HOW IT WORKS</h2>
+  <h2 class="section-label section-label--tagteach fade-in" data-i18n="tagteach-how">HOW IT WORKS</h2>
 
   <div class="list-card fade-in">
     <span class="list-num list-num--tagteach">01</span>
     <div class="list-content">
-      <h3 class="list-name">identify the tag point</h3>
-      <p class="list-desc">the smallest learnable piece. one thing at a time. nothing more.</p>
+      <h3 class="list-name" data-i18n="tagteach-step-1">identify the tag point</h3>
+      <p class="list-desc" data-i18n="mob-tagteach-step-1-desc">the smallest learnable piece. one thing at a time. nothing more.</p>
     </div>
   </div>
 
   <div class="list-card fade-in">
     <span class="list-num list-num--tagteach">02</span>
     <div class="list-content">
-      <h3 class="list-name">mark the moment</h3>
-      <p class="list-desc">the click happens at the exact instant the behavior is correct. timing is everything.</p>
+      <h3 class="list-name" data-i18n="tagteach-step-2">mark the moment</h3>
+      <p class="list-desc" data-i18n="mob-tagteach-step-2-desc">the click happens at the exact instant the behavior is correct. timing is everything.</p>
     </div>
   </div>
 
   <div class="list-card fade-in">
     <span class="list-num list-num--tagteach">03</span>
     <div class="list-content">
-      <h3 class="list-name">reinforce</h3>
-      <p class="list-desc">the brain connects the click to the action. repeat. the body learns what words cannot teach.</p>
+      <h3 class="list-name" data-i18n="tagteach-step-3">reinforce</h3>
+      <p class="list-desc" data-i18n="mob-tagteach-step-3-desc">the brain connects the click to the action. repeat. the body learns what words cannot teach.</p>
     </div>
   </div>
 </section>
@@ -118,7 +127,7 @@
      STATEMENT
      ============================================ -->
 <section class="closing fade-in">
-  <p class="closing-text closing-text--tagteach">the click is not a reward. it is information.</p>
+  <p class="closing-text closing-text--tagteach" data-i18n="tagteach-statement">the click is not a reward. it is information.</p>
 </section>
 
 
@@ -146,23 +155,23 @@
 <nav class="bottom-nav nav--tagteach" aria-label="Main navigation">
   <a href="index-mobile.html" class="nav-tab" aria-label="Home">
     <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-    <span class="nav-label">HOME</span>
+    <span class="nav-label" data-i18n="mob-nav-home">HOME</span>
   </a>
   <a href="boxing-mobile.html" class="nav-tab" aria-label="Boxing">
     <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/></svg>
-    <span class="nav-label">BOX</span>
+    <span class="nav-label" data-i18n="mob-nav-box">BOX</span>
   </a>
   <a href="#top" class="nav-tab active" aria-label="TagTeach">
     <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
-    <span class="nav-label">TAG</span>
+    <span class="nav-label" data-i18n="mob-nav-tag">TAG</span>
   </a>
   <a href="schedule-mobile.html" class="nav-tab" aria-label="Schedule">
     <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-    <span class="nav-label">TIME</span>
+    <span class="nav-label" data-i18n="mob-nav-time">TIME</span>
   </a>
   <a href="index-mobile.html" class="nav-tab" aria-label="More">
     <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-    <span class="nav-label">MORE</span>
+    <span class="nav-label" data-i18n="mob-nav-more">MORE</span>
   </a>
 </nav>
 
@@ -229,6 +238,7 @@ document.querySelectorAll('.nav-tab[href^="#"]').forEach(function(link) {
   });
 });
 </script>
+<script src="lang.js"></script>
 
 </body>
 </html>

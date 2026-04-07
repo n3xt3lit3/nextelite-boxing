@@ -9,6 +9,8 @@
 <!-- l1ft0ff — Mission Haymaker — mobile-native boxing -->
 <!-- designed for thumbs. not cursors. -->
 <!-- 375px to 428px. iPhone SE to Pro Max. nothing else matters. -->
+<!-- l1ft0ff — Mission Babel — i18n added -->
+<link rel="stylesheet" href="lang-toggle.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -19,6 +21,13 @@
 
 <!-- l1ft0ff — the phone remembers too. -->
 
+<!-- l1ft0ff — Mission Babel — language toggle -->
+<div class="lang-toggle lang-toggle--mobile" aria-label="Language selector">
+  <button class="lang-btn" data-lang-btn="no">NO</button>
+  <span class="lang-sep">/</span>
+  <button class="lang-btn active" data-lang-btn="en">EN</button>
+</div>
+
 <!-- ============================================
      HERO — full bleed, text over gradient
      no wasted space. instant impact.
@@ -28,8 +37,8 @@
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <h1 class="hero-title">BOXING</h1>
-    <p class="hero-sub">gloves on.</p>
+    <h1 class="hero-title" data-i18n="page-title-boxing">BOXING</h1>
+    <p class="hero-sub" data-i18n="boxing-subtitle">gloves on.</p>
   </div>
   <div class="hero-scroll-hint" aria-hidden="true">
     <span class="scroll-arrow"></span>
@@ -41,7 +50,7 @@
      INTRO — short, punchy, no padding waste
      ============================================ -->
 <section class="intro fade-in">
-  <p>not a fitness class. not cardio. boxing. the kind where you learn what your hands are for and your ego becomes optional.</p>
+  <p data-i18n="boxing-intro">not a fitness class. not cardio. boxing. the kind where you learn what your hands are for and your ego becomes optional.</p>
 </section>
 
 
@@ -50,37 +59,37 @@
      touch-native horizontal scroll with snap
      ============================================ -->
 <section class="gallery-section" aria-label="Boxing photos">
-  <h2 class="section-label fade-in">THE SPACE</h2>
+  <h2 class="section-label fade-in" data-i18n="mobile-gallery-space">THE SPACE</h2>
   <div class="gallery" role="region" aria-label="Swipeable photo gallery" tabindex="0">
     <div class="gallery-track">
       <div class="gallery-slide">
         <div class="gallery-photo" role="img" aria-label="Century BOB training dummy with timer" style="background-image: url('img/gym-6274.jpg'); background-size: cover; background-position: center;">
-          <span class="photo-caption">the dummy</span>
+          <span class="photo-caption" data-i18n="caption-dummy">the dummy</span>
         </div>
       </div>
       <div class="gallery-slide">
         <div class="gallery-photo" role="img" aria-label="Everlast heavy bag" style="background-image: url('img/gym-6291.jpg'); background-size: cover; background-position: center;">
-          <span class="photo-caption">the bag</span>
+          <span class="photo-caption" data-i18n="caption-bag">the bag</span>
         </div>
       </div>
       <div class="gallery-slide">
         <div class="gallery-photo" role="img" aria-label="Footwork tape marks on floor" style="background-image: url('img/gym-6264.jpg'); background-size: cover; background-position: center;">
-          <span class="photo-caption">the floor</span>
+          <span class="photo-caption" data-i18n="caption-floor">the floor</span>
         </div>
       </div>
       <div class="gallery-slide">
         <div class="gallery-photo" role="img" aria-label="Meister speed bag on wall" style="background-image: url('img/gym-6286.jpg'); background-size: cover; background-position: center;">
-          <span class="photo-caption">the speed</span>
+          <span class="photo-caption" data-i18n="caption-speed">the speed</span>
         </div>
       </div>
       <div class="gallery-slide">
         <div class="gallery-photo" role="img" aria-label="Fighter wallbag" style="background-image: url('img/gym-6283.jpg'); background-size: cover; background-position: center;">
-          <span class="photo-caption">the wall</span>
+          <span class="photo-caption" data-i18n="caption-wall">the wall</span>
         </div>
       </div>
       <div class="gallery-slide">
         <div class="gallery-photo" role="img" aria-label="Title body protector" style="background-image: url('img/gym-6304.jpg'); background-size: cover; background-position: center;">
-          <span class="photo-caption">the gear</span>
+          <span class="photo-caption" data-i18n="caption-gear">the gear</span>
         </div>
       </div>
     </div>
@@ -93,7 +102,7 @@
     <span class="dot"></span>
     <span class="dot"></span>
   </div>
-  <p class="swipe-hint fade-in">swipe</p>
+  <p class="swipe-hint fade-in" data-i18n="mobile-swipe">swipe</p>
 </section>
 
 
@@ -102,14 +111,14 @@
      replaces desktop hover grid
      ============================================ -->
 <section class="equipment-section">
-  <h2 class="section-label fade-in">THE EQUIPMENT</h2>
+  <h2 class="section-label fade-in" data-i18n="mobile-gallery-equipment">THE EQUIPMENT</h2>
 
   <div class="equip-card fade-in" data-equip="bag">
     <div class="equip-photo" role="img" aria-label="Everlast heavy bag" style="background-image: url('img/gym-6291.jpg'); background-size: cover; background-position: center top;">
     </div>
     <div class="equip-info">
-      <h3 class="equip-name">the bag</h3>
-      <p class="equip-desc">everlast heavy bag. chain-mounted. the one that swings back. this is where you learn what your hands are for.</p>
+      <h3 class="equip-name" data-i18n="mob-equip-bag-name">the bag</h3>
+      <p class="equip-desc" data-i18n="mob-equip-bag-desc">everlast heavy bag. chain-mounted. the one that swings back. this is where you learn what your hands are for.</p>
     </div>
   </div>
 
@@ -117,8 +126,8 @@
     <div class="equip-photo" role="img" aria-label="Century BOB dummy" style="background-image: url('img/gym-6288.jpg'); background-size: cover; background-position: center;">
     </div>
     <div class="equip-info">
-      <h3 class="equip-name">the dummy</h3>
-      <p class="equip-desc">century bob. it never hits back. that is the point. practice precision when there are no consequences. then carry it into chaos.</p>
+      <h3 class="equip-name" data-i18n="mob-equip-dummy-name">the dummy</h3>
+      <p class="equip-desc" data-i18n="mob-equip-dummy-desc">century bob. it never hits back. that is the point. practice precision when there are no consequences. then carry it into chaos.</p>
     </div>
   </div>
 
@@ -126,8 +135,8 @@
     <div class="equip-photo" role="img" aria-label="Meister speed bag" style="background-image: url('img/gym-6243.jpg'); background-size: cover; background-position: center;">
     </div>
     <div class="equip-info">
-      <h3 class="equip-name">the speed</h3>
-      <p class="equip-desc">meister speed bag. wall-mounted on wood. rhythm is violence made precise. you don't hit it. you listen to it.</p>
+      <h3 class="equip-name" data-i18n="mob-equip-speed-name">the speed</h3>
+      <p class="equip-desc" data-i18n="mob-equip-speed-desc">meister speed bag. wall-mounted on wood. rhythm is violence made precise. you don't hit it. you listen to it.</p>
     </div>
   </div>
 
@@ -135,8 +144,8 @@
     <div class="equip-photo" role="img" aria-label="Fighter wallbag" style="background-image: url('img/gym-6282.jpg'); background-size: cover; background-position: center;">
     </div>
     <div class="equip-info">
-      <h3 class="equip-name">the wall</h3>
-      <p class="equip-desc">fighter wallbag. wall-mounted uppercuts in the dark. when the heavy bag teaches power, the wall teaches angles. close range. personal.</p>
+      <h3 class="equip-name" data-i18n="mob-equip-wall-name">the wall</h3>
+      <p class="equip-desc" data-i18n="mob-equip-wall-desc">fighter wallbag. wall-mounted uppercuts in the dark. when the heavy bag teaches power, the wall teaches angles. close range. personal.</p>
     </div>
   </div>
 </section>
@@ -146,10 +155,10 @@
      STATEMENT — full bleed, centered
      ============================================ -->
 <section class="statement fade-in">
-  <p class="statement-text">boxing is meditation with consequences.</p>
+  <p class="statement-text" data-i18n="mob-boxing-statement-1">boxing is meditation with consequences.</p>
   <div class="statement-photo" role="img" aria-label="Kriger in the gym" style="background-image: url('img/gym-6253.jpg'); background-size: cover; background-position: center;">
   </div>
-  <p class="statement-body">one room. blue mats. bags that don't care about your day. two dogs watching from the corner. this is not a fitness center. this is where you go to remember what discipline feels like.</p>
+  <p class="statement-body" data-i18n="mob-boxing-statement-2">one room. blue mats. bags that don't care about your day. two dogs watching from the corner. this is not a fitness center. this is where you go to remember what discipline feels like.</p>
 </section>
 
 
@@ -158,26 +167,26 @@
      replaces desktop 3-column grid
      ============================================ -->
 <section class="training" id="training">
-  <h2 class="section-label section-label--light fade-in">THE TRAINING</h2>
-  <p class="training-intro fade-in">three modes. one principle: show up and the work reveals itself.</p>
+  <h2 class="section-label section-label--light fade-in" data-i18n="mobile-training">THE TRAINING</h2>
+  <p class="training-intro fade-in" data-i18n="mob-train-intro">three modes. one principle: show up and the work reveals itself.</p>
 
   <div class="training-carousel" role="region" aria-label="Training modes" tabindex="0">
     <div class="training-track">
       <div class="training-card">
-        <span class="training-accent">rounds</span>
-        <h3 class="training-name">boxing</h3>
-        <p class="training-desc">heavy bag. speed bag. bob. wallbag. reflex stick. combinations until your brain stops narrating and your body takes over. that is the goal.</p>
+        <span class="training-accent" data-i18n="mob-train-rounds">rounds</span>
+        <h3 class="training-name" data-i18n="mob-train-boxing">boxing</h3>
+        <p class="training-desc" data-i18n="mob-train-boxing-desc">heavy bag. speed bag. bob. wallbag. reflex stick. combinations until your brain stops narrating and your body takes over. that is the goal.</p>
       </div>
       <div class="training-card">
-        <span class="training-accent">circuits</span>
-        <h3 class="training-name">conditioning</h3>
-        <p class="training-desc">jump rope. agility ladder. trx suspension. no machines. no screens. just you, gravity, and the timer. the kind of tired that fixes things.</p>
+        <span class="training-accent" data-i18n="mob-train-circuits">circuits</span>
+        <h3 class="training-name" data-i18n="mob-train-conditioning">conditioning</h3>
+        <p class="training-desc" data-i18n="mob-train-conditioning-desc">jump rope. agility ladder. trx suspension. no machines. no screens. just you, gravity, and the timer. the kind of tired that fixes things.</p>
       </div>
       <div class="training-card">
         <!-- the third card. the quiet one. the one that matters most. -->
-        <span class="training-accent">film</span>
-        <h3 class="training-name">analysis</h3>
-        <p class="training-desc">tripod-recorded sessions. watch yourself. see what you thought you were doing vs. what you actually did. the mirror lies. the camera doesn't.</p>
+        <span class="training-accent" data-i18n="mob-train-film">film</span>
+        <h3 class="training-name" data-i18n="mob-train-analysis">analysis</h3>
+        <p class="training-desc" data-i18n="mob-train-analysis-desc">tripod-recorded sessions. watch yourself. see what you thought you were doing vs. what you actually did. the mirror lies. the camera doesn't.</p>
       </div>
     </div>
   </div>
@@ -194,29 +203,29 @@
      mobile-native: full width, clear separation
      ============================================ -->
 <section class="walls" id="walls">
-  <h2 class="section-label fade-in">THE FOUR WALLS</h2>
+  <h2 class="section-label fade-in" data-i18n="mobile-four-walls">THE FOUR WALLS</h2>
 
   <div class="wall-card fade-in">
     <span class="wall-num">i</span>
     <div class="wall-content">
-      <h3 class="wall-name">show up</h3>
-      <p class="wall-desc">the hardest round is the one before you start. open the door. that is the workout.</p>
+      <h3 class="wall-name" data-i18n="mob-wall-1-name">show up</h3>
+      <p class="wall-desc" data-i18n="mob-wall-1-desc">the hardest round is the one before you start. open the door. that is the workout.</p>
     </div>
   </div>
 
   <div class="wall-card fade-in">
     <span class="wall-num">ii</span>
     <div class="wall-content">
-      <h3 class="wall-name">gloves on</h3>
-      <p class="wall-desc">no spectators. once you are here, you are here. wrap your hands. commit.</p>
+      <h3 class="wall-name" data-i18n="mob-wall-2-name">gloves on</h3>
+      <p class="wall-desc" data-i18n="mob-wall-2-desc">no spectators. once you are here, you are here. wrap your hands. commit.</p>
     </div>
   </div>
 
   <div class="wall-card fade-in">
     <span class="wall-num">iii</span>
     <div class="wall-content">
-      <h3 class="wall-name">no shortcuts</h3>
-      <p class="wall-desc">every rep counts or none of them do. form over speed. patience over ego. always.</p>
+      <h3 class="wall-name" data-i18n="mob-wall-3-name">no shortcuts</h3>
+      <p class="wall-desc" data-i18n="mob-wall-3-desc">every rep counts or none of them do. form over speed. patience over ego. always.</p>
     </div>
   </div>
 
@@ -224,8 +233,8 @@
     <!-- the fourth wall. the one that watches. -->
     <span class="wall-num">iv</span>
     <div class="wall-content">
-      <h3 class="wall-name">the ring remembers</h3>
-      <p class="wall-desc">what you do when no one is watching is who you are. the room keeps score.</p>
+      <h3 class="wall-name" data-i18n="mob-wall-4-name">the ring remembers</h3>
+      <p class="wall-desc" data-i18n="mob-wall-4-desc">what you do when no one is watching is who you are. the room keeps score.</p>
     </div>
   </div>
 </section>
@@ -238,9 +247,9 @@
   <div class="location-photo" role="img" aria-label="Gym exterior" style="background-image: url('img/gym-6284.jpg'); background-size: cover; background-position: center;">
   </div>
   <div class="location-info">
-    <h2 class="location-title">myre, vesteralen</h2>
-    <p class="location-body">above the arctic circle. where winter is five months of darkness and the gym lights are always on. this is not a destination. this is where the work lives.</p>
-    <p class="location-body">nextelite boxing and tagteach. run by nemine steffensen. two dogs on site. they don't judge your footwork. much.</p>
+    <h2 class="location-title" data-i18n="mob-location-title">myre, vesteralen</h2>
+    <p class="location-body" data-i18n="mob-location-body-1">above the arctic circle. where winter is five months of darkness and the gym lights are always on. this is not a destination. this is where the work lives.</p>
+    <p class="location-body" data-i18n="mob-location-body-2">nextelite boxing and tagteach. run by nemine steffensen. two dogs on site. they don't judge your footwork. much.</p>
     <span class="location-coords">68.3919 N, 15.0567 E</span>
   </div>
 </section>
@@ -259,7 +268,7 @@
      CLOSING STATEMENT
      ============================================ -->
 <section class="closing fade-in">
-  <p class="closing-text">the ring remembers.</p>
+  <p class="closing-text" data-i18n="mob-closing-ring">the ring remembers.</p>
 </section>
 
 
@@ -290,19 +299,19 @@
 <nav class="bottom-nav" aria-label="Main navigation">
   <a href="#top" class="nav-tab active" aria-label="Home">
     <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-    <span class="nav-label">HOME</span>
+    <span class="nav-label" data-i18n="mob-nav-home">HOME</span>
   </a>
   <a href="#training" class="nav-tab" aria-label="Training">
     <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-    <span class="nav-label">TRAIN</span>
+    <span class="nav-label" data-i18n="mob-nav-train">TRAIN</span>
   </a>
   <a href="#walls" class="nav-tab" aria-label="The Four Walls">
     <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="12" y1="3" x2="12" y2="21"/></svg>
-    <span class="nav-label">WALLS</span>
+    <span class="nav-label" data-i18n="mob-nav-walls">WALLS</span>
   </a>
   <a href="index.html" class="nav-tab" aria-label="Navigation hub">
     <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-    <span class="nav-label">MORE</span>
+    <span class="nav-label" data-i18n="mob-nav-more">MORE</span>
   </a>
 </nav>
 
@@ -441,6 +450,7 @@ document.querySelectorAll('.nav-tab[href^="#"]').forEach(function(link) {
   });
 });
 </script>
+<script src="lang.js"></script>
 
 </body>
 </html>

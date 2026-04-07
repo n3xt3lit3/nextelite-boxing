@@ -6,6 +6,8 @@
   <title>SCHEDULE — N3XT3LIT3</title>
   <!-- l1ft0ff — Mission Tri-Ferg — schedule subpage -->
   <!-- the hardest round is the one before you start. -->
+  <!-- l1ft0ff — Mission Babel — i18n added -->
+  <link rel="stylesheet" href="lang-toggle.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -382,12 +384,19 @@
 
 <!-- l1ft0ff — the hardest round is the one before you start. open the door. -->
 
-<a href="index.html" class="back" aria-label="Back to main navigation">&larr; BACK</a>
+<!-- l1ft0ff — Mission Babel — language toggle -->
+<div class="lang-toggle" aria-label="Language selector">
+  <button class="lang-btn" data-lang-btn="no">NO</button>
+  <span class="lang-sep">/</span>
+  <button class="lang-btn active" data-lang-btn="en">EN</button>
+</div>
+
+<a href="index.html" class="back" aria-label="Back to main navigation" data-i18n-html="back">&larr; BACK</a>
 
 <header class="hero">
-  <h1>SCHEDULE</h1>
-  <p class="subtitle">show up.</p>
-  <p class="intro">the hardest round is the one before you start. open the door.</p>
+  <h1 data-i18n="page-title-schedule">SCHEDULE</h1>
+  <p class="subtitle" data-i18n="schedule-subtitle">show up.</p>
+  <p class="intro" data-i18n="schedule-intro">the hardest round is the one before you start. open the door.</p>
 </header>
 
 <section class="photo-row" aria-label="Schedule photos">
@@ -400,34 +409,34 @@
 </section>
 
 <section class="schedule-section">
-  <h2>WEEKLY</h2>
+  <h2 data-i18n="schedule-weekly">WEEKLY</h2>
   <div class="schedule-grid">
     <div class="day-card">
-      <div class="day-name">MONDAY</div>
-      <div class="day-time">Boxing</div>
-      <div class="day-tbd">time tbd</div>
+      <div class="day-name" data-i18n="schedule-monday">MONDAY</div>
+      <div class="day-time" data-i18n="schedule-boxing">Boxing</div>
+      <div class="day-tbd" data-i18n="schedule-tbd">time tbd</div>
     </div>
     <div class="day-card">
-      <div class="day-name">WEDNESDAY</div>
-      <div class="day-time">Boxing</div>
-      <div class="day-tbd">time tbd</div>
+      <div class="day-name" data-i18n="schedule-wednesday">WEDNESDAY</div>
+      <div class="day-time" data-i18n="schedule-boxing">Boxing</div>
+      <div class="day-tbd" data-i18n="schedule-tbd">time tbd</div>
     </div>
     <div class="day-card">
-      <div class="day-name">FRIDAY</div>
-      <div class="day-time">Boxing</div>
-      <div class="day-tbd">time tbd</div>
+      <div class="day-name" data-i18n="schedule-friday">FRIDAY</div>
+      <div class="day-time" data-i18n="schedule-boxing">Boxing</div>
+      <div class="day-tbd" data-i18n="schedule-tbd">time tbd</div>
     </div>
   </div>
 </section>
 
 <section class="contact">
-  <h2>CONTACT</h2>
+  <h2 data-i18n="schedule-contact">CONTACT</h2>
   <p><a href="mailto:nemine@nextelite.no">nemine@nextelite.no</a></p>
-  <p style="margin-top: 4px; font-size: 14px; color: #aaa;">myre, vesteralen</p>
+  <p style="margin-top: 4px; font-size: 14px; color: #aaa;" data-i18n="schedule-location">myre, vesteralen</p>
 </section>
 
 <div class="statement">
-  <p>no excuses accepted. no excuses needed.</p>
+  <p data-i18n="schedule-statement">no excuses accepted. no excuses needed.</p>
 </div>
 
 <!-- monday. wednesday. friday. repeat until dangerous. -->
@@ -436,8 +445,8 @@
     <a href="https://x.com/N3XT3LIT3">X</a>
   </div>
   <div class="footer-row">
-    <a href="#mailing">MAILING LIST</a>
-    <span>BORING STUFF</span>
+    <a href="#mailing" data-i18n="footer-mailing">MAILING LIST</a>
+    <span data-i18n="footer-boring">BORING STUFF</span>
   </div>
 </footer>
 
@@ -460,5 +469,6 @@
     });
   })();
 </script>
+<script src="lang.js"></script>
 </body>
 </html>

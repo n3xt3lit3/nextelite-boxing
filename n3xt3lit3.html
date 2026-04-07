@@ -7,6 +7,8 @@
   <!-- l1ft0ff — Mission Tri-Ferg — n3xt3lit3 subpage -->
   <!-- not here to be pretty. here to be dangerous. -->
   <!-- if you found this, you're one of us. -->
+  <!-- l1ft0ff — Mission Babel — i18n added -->
+  <link rel="stylesheet" href="lang-toggle.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -362,23 +364,30 @@
 
 <!-- l1ft0ff — <333 xxx n3xt3lit3 — the quiet page. the loudest one. -->
 
-<a href="index.html" class="back" aria-label="Back to main navigation">&larr; BACK</a>
+<!-- l1ft0ff — Mission Babel — language toggle -->
+<div class="lang-toggle" aria-label="Language selector">
+  <button class="lang-btn" data-lang-btn="no">NO</button>
+  <span class="lang-sep">/</span>
+  <button class="lang-btn active" data-lang-btn="en">EN</button>
+</div>
+
+<a href="index.html" class="back" aria-label="Back to main navigation" data-i18n-html="back">&larr; BACK</a>
 
 <header class="hero">
-  <h1>N3XT3LIT3</h1>
-  <p class="subtitle">not here to be pretty. here to be dangerous.</p>
+  <h1 data-i18n="page-title-n3xt3lit3">N3XT3LIT3</h1>
+  <p class="subtitle" data-i18n="n3xt3lit3-subtitle">not here to be pretty. here to be dangerous.</p>
 </header>
 
 <section class="about">
-  <p>nextelite boxing and tagteach. run by nemine steffensen. myre, vesteralen, northern norway. above the arctic circle.</p>
+  <p data-i18n="n3xt3lit3-about">nextelite boxing and tagteach. run by nemine steffensen. myre, vesteralen, northern norway. above the arctic circle.</p>
 </section>
 
 <section class="walls">
   <div class="walls-grid">
-    <div class="wall-item"><div class="wall-text">show up</div></div>
-    <div class="wall-item"><div class="wall-text">gloves on</div></div>
-    <div class="wall-item"><div class="wall-text">no shortcuts</div></div>
-    <div class="wall-item"><div class="wall-text">the ring remembers</div></div>
+    <div class="wall-item"><div class="wall-text" data-i18n="n3xt3lit3-wall-1">show up</div></div>
+    <div class="wall-item"><div class="wall-text" data-i18n="n3xt3lit3-wall-2">gloves on</div></div>
+    <div class="wall-item"><div class="wall-text" data-i18n="n3xt3lit3-wall-3">no shortcuts</div></div>
+    <div class="wall-item"><div class="wall-text" data-i18n="n3xt3lit3-wall-4">the ring remembers</div></div>
   </div>
 </section>
 
@@ -401,8 +410,8 @@
     <a href="https://x.com/N3XT3LIT3">X</a>
   </div>
   <div class="footer-row">
-    <a href="#mailing">MAILING LIST</a>
-    <span>BORING STUFF</span>
+    <a href="#mailing" data-i18n="footer-mailing">MAILING LIST</a>
+    <span data-i18n="footer-boring">BORING STUFF</span>
   </div>
 </footer>
 
@@ -431,5 +440,6 @@
     });
   })();
 </script>
+<script src="lang.js"></script>
 </body>
 </html>

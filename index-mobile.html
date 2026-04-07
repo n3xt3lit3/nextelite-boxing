@@ -8,6 +8,8 @@
 <title>NextElite</title>
 <!-- l1ft0ff — Mission Constellation — mobile landing -->
 <!-- five doors. one thumb. choose. -->
+<!-- l1ft0ff — Mission Babel — i18n added -->
+<link rel="stylesheet" href="lang-toggle.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -22,22 +24,29 @@
      LANDING — full screen, stacked nav items
      the whole site is one thumb away
      ============================================ -->
+<!-- l1ft0ff — Mission Babel — language toggle -->
+<div class="lang-toggle lang-toggle--mobile" aria-label="Language selector">
+  <button class="lang-btn" data-lang-btn="no">NO</button>
+  <span class="lang-sep">/</span>
+  <button class="lang-btn active" data-lang-btn="en">EN</button>
+</div>
+
 <main class="index-hero">
   <nav class="index-nav" aria-label="Main navigation">
     <a href="boxing-mobile.html" class="index-link" data-id="boxing" aria-label="Boxing">
-      <span class="index-link-text">BOXING</span>
+      <span class="index-link-text" data-i18n="nav-boxing">BOXING</span>
     </a>
     <a href="tagteach-mobile.html" class="index-link" data-id="tagteach" aria-label="TagTeach">
-      <span class="index-link-text">TAGTEACH</span>
+      <span class="index-link-text" data-i18n="nav-tagteach">TAGTEACH</span>
     </a>
     <a href="the-space-mobile.html" class="index-link" data-id="space" aria-label="The Space">
-      <span class="index-link-text">THE SPACE</span>
+      <span class="index-link-text" data-i18n="nav-space">THE SPACE</span>
     </a>
     <a href="schedule-mobile.html" class="index-link" data-id="schedule" aria-label="Schedule">
-      <span class="index-link-text">SCHEDULE</span>
+      <span class="index-link-text" data-i18n="nav-schedule">SCHEDULE</span>
     </a>
     <a href="n3xt3lit3-mobile.html" class="index-link" data-id="n3xt3lit3" aria-label="NextElite">
-      <span class="index-link-text">N3XT3LIT3</span>
+      <span class="index-link-text" data-i18n="nav-n3xt3lit3">N3XT3LIT3</span>
     </a>
   </nav>
 </main>
@@ -107,6 +116,7 @@ console.log('%c five doors. one thumb. ', 'color: #D5D5D5; font-size: 10px;');
   }, 500);
 })();
 </script>
+<script src="lang.js"></script>
 
 </body>
 </html>

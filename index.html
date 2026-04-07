@@ -7,6 +7,8 @@
   <!-- l1ft0ff — Mission Tri-Ferg — exp-14 -->
   <!-- Palace energy. Five words. That's the whole site. -->
   <!-- If you're reading this, you're paying attention. Good. -->
+  <!-- l1ft0ff — Mission Babel — i18n added -->
+  <link rel="stylesheet" href="lang-toggle.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@500&display=swap" rel="stylesheet">
@@ -71,6 +73,14 @@
       letter-spacing: -0.02em;
       transition: opacity 0.3s ease, transform 0.3s ease;
       white-space: nowrap;
+      /* handle longer Norwegian text — scale down gracefully */
+      max-width: 100%;
+      overflow: visible;
+    }
+
+    /* longer hover labels (e.g. TRENINGSLOKALET) get smaller font */
+    .nav-item .hover-label {
+      font-size: clamp(18px, 2.8vw, 42px);
     }
 
     .nav-item .label {
@@ -176,12 +186,16 @@
       }
 
       .nav-item {
-        width: clamp(120px, 40vw, 180px);
+        width: clamp(140px, 45vw, 200px);
       }
 
       .nav-item .label,
       .nav-item .hover-label {
-        font-size: clamp(32px, 10vw, 48px);
+        font-size: clamp(28px, 9vw, 44px);
+      }
+
+      .nav-item .hover-label {
+        font-size: clamp(20px, 7vw, 36px);
       }
     }
 
@@ -192,7 +206,11 @@
 
       .nav-item .label,
       .nav-item .hover-label {
-        font-size: clamp(28px, 12vw, 42px);
+        font-size: clamp(24px, 10vw, 38px);
+      }
+
+      .nav-item .hover-label {
+        font-size: clamp(18px, 8vw, 32px);
       }
     }
   </style>
@@ -201,35 +219,42 @@
 <!-- Mission Tri-Ferg. Five shapes. Five doors. Choose. -->
 <!-- l1ft0ff — Mission Haymaker — mobile routing added -->
 
+<!-- l1ft0ff — Mission Babel — language toggle -->
+<div class="lang-toggle" aria-label="Language selector">
+  <button class="lang-btn" data-lang-btn="no">NO</button>
+  <span class="lang-sep">/</span>
+  <button class="lang-btn active" data-lang-btn="en">EN</button>
+</div>
+
 <nav class="nav" aria-label="Main navigation">
   <!-- 1. BOXING — red -->
   <a href="boxing.html" class="nav-item" data-id="boxing" role="link" aria-label="Boxing">
-    <span class="label">BOXING</span>
-    <span class="hover-label" aria-hidden="true">GLOVES ON</span>
+    <span class="label" data-i18n="nav-boxing">BOXING</span>
+    <span class="hover-label" aria-hidden="true" data-i18n="nav-hover-boxing">GLOVES ON</span>
   </a>
 
   <!-- 2. TAGTEACH — navy -->
   <a href="tagteach.html" class="nav-item" data-id="tagteach" role="link" aria-label="TagTeach">
-    <span class="label">TAGTEACH</span>
-    <span class="hover-label" aria-hidden="true">CLICK.</span>
+    <span class="label" data-i18n="nav-tagteach">TAGTEACH</span>
+    <span class="hover-label" aria-hidden="true" data-i18n="nav-hover-tagteach">CLICK.</span>
   </a>
 
   <!-- 3. THE SPACE — black -->
   <a href="the-space.html" class="nav-item" data-id="space" role="link" aria-label="The Space">
-    <span class="label">THE SPACE</span>
-    <span class="hover-label" aria-hidden="true">THE GYM</span>
+    <span class="label" data-i18n="nav-space">THE SPACE</span>
+    <span class="hover-label" aria-hidden="true" data-i18n="nav-hover-space">THE GYM</span>
   </a>
 
   <!-- 4. SCHEDULE — neon -->
   <a href="schedule.html" class="nav-item" data-id="schedule" role="link" aria-label="Schedule">
-    <span class="label">SCHEDULE</span>
-    <span class="hover-label" aria-hidden="true">SHOW UP</span>
+    <span class="label" data-i18n="nav-schedule">SCHEDULE</span>
+    <span class="hover-label" aria-hidden="true" data-i18n="nav-hover-schedule">SHOW UP</span>
   </a>
 
   <!-- 5. N3XT3LIT3 — gray. the quiet one. -->
   <a href="n3xt3lit3.html" class="nav-item" data-id="n3xt3lit3" role="link" aria-label="NextElite">
-    <span class="label">N3XT3LIT3</span>
-    <span class="hover-label" aria-hidden="true">DANGEROUS</span>
+    <span class="label" data-i18n="nav-n3xt3lit3">N3XT3LIT3</span>
+    <span class="hover-label" aria-hidden="true" data-i18n="nav-hover-n3xt3lit3">DANGEROUS</span>
   </a>
 </nav>
 
@@ -239,8 +264,8 @@
     <a href="https://x.com/N3XT3LIT3">X</a>
   </div>
   <div class="footer-row">
-    <a href="#mailing">MAILING LIST</a>
-    <span>BORING STUFF</span>
+    <a href="#mailing" data-i18n="footer-mailing">MAILING LIST</a>
+    <span data-i18n="footer-boring">BORING STUFF</span>
   </div>
 </footer>
 <!-- you found the boring stuff. congrats. -->
@@ -304,5 +329,6 @@
     }, 500);
   })();
 </script>
+<script src="lang.js"></script>
 </body>
 </html>

@@ -6,6 +6,8 @@
   <title>TAGTEACH — N3XT3LIT3</title>
   <!-- l1ft0ff — Mission Tri-Ferg — tagteach subpage -->
   <!-- the click is information. nothing more. nothing less. -->
+  <!-- l1ft0ff — Mission Babel — i18n added -->
+  <link rel="stylesheet" href="lang-toggle.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -325,12 +327,19 @@
 
 <!-- l1ft0ff — the tag point is the smallest piece. the smallest piece is everything. -->
 
-<a href="index.html" class="back" aria-label="Back to main navigation">&larr; BACK</a>
+<!-- l1ft0ff — Mission Babel — language toggle -->
+<div class="lang-toggle" aria-label="Language selector">
+  <button class="lang-btn" data-lang-btn="no">NO</button>
+  <span class="lang-sep">/</span>
+  <button class="lang-btn active" data-lang-btn="en">EN</button>
+</div>
+
+<a href="index.html" class="back" aria-label="Back to main navigation" data-i18n-html="back">&larr; BACK</a>
 
 <header class="hero">
-  <h1>TAGTEACH</h1>
-  <p class="subtitle">click.</p>
-  <p class="intro">precision feedback. one click at a time. tagteach applies clicker training principles to human coaching. the tag point is the smallest piece of behavior that matters.</p>
+  <h1 data-i18n="page-title-tagteach">TAGTEACH</h1>
+  <p class="subtitle" data-i18n="tagteach-subtitle">click.</p>
+  <p class="intro" data-i18n="tagteach-intro">precision feedback. one click at a time. tagteach applies clicker training principles to human coaching. the tag point is the smallest piece of behavior that matters.</p>
 </header>
 
 <section class="photo-grid" aria-label="TagTeach photos">
@@ -352,16 +361,16 @@
 </section>
 
 <section class="section">
-  <h2>HOW IT WORKS</h2>
+  <h2 data-i18n="tagteach-how">HOW IT WORKS</h2>
   <ul>
-    <li><span class="step-number">01</span> identify the tag point</li>
-    <li><span class="step-number">02</span> mark the moment</li>
-    <li><span class="step-number">03</span> reinforce</li>
+    <li><span class="step-number">01</span> <span data-i18n="tagteach-step-1">identify the tag point</span></li>
+    <li><span class="step-number">02</span> <span data-i18n="tagteach-step-2">mark the moment</span></li>
+    <li><span class="step-number">03</span> <span data-i18n="tagteach-step-3">reinforce</span></li>
   </ul>
 </section>
 
 <div class="statement">
-  <p>the click is not a reward. it is information.</p>
+  <p data-i18n="tagteach-statement">the click is not a reward. it is information.</p>
 </div>
 
 <!-- tag point: you found this comment. click. -->
@@ -370,8 +379,8 @@
     <a href="https://x.com/N3XT3LIT3">X</a>
   </div>
   <div class="footer-row">
-    <a href="#mailing">MAILING LIST</a>
-    <span>BORING STUFF</span>
+    <a href="#mailing" data-i18n="footer-mailing">MAILING LIST</a>
+    <span data-i18n="footer-boring">BORING STUFF</span>
   </div>
 </footer>
 
@@ -403,5 +412,6 @@
     });
   })();
 </script>
+<script src="lang.js"></script>
 </body>
 </html>

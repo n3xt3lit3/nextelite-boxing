@@ -6,6 +6,8 @@
   <title>BOXING — N3XT3LIT3</title>
   <!-- l1ft0ff — Mission Tri-Ferg — boxing subpage -->
   <!-- gloves on. ego optional. -->
+  <!-- l1ft0ff — Mission Babel — i18n added -->
+  <link rel="stylesheet" href="lang-toggle.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -325,12 +327,19 @@
 
 <!-- l1ft0ff — the ring remembers. do you? -->
 
-<a href="index.html" class="back" aria-label="Back to main navigation">&larr; BACK</a>
+<!-- l1ft0ff — Mission Babel — language toggle -->
+<div class="lang-toggle" aria-label="Language selector">
+  <button class="lang-btn" data-lang-btn="no">NO</button>
+  <span class="lang-sep">/</span>
+  <button class="lang-btn active" data-lang-btn="en">EN</button>
+</div>
+
+<a href="index.html" class="back" aria-label="Back to main navigation" data-i18n-html="back">&larr; BACK</a>
 
 <header class="hero">
-  <h1>BOXING</h1>
-  <p class="subtitle">gloves on.</p>
-  <p class="intro">not a fitness class. not cardio. boxing. the kind where you learn what your hands are for and your ego becomes optional.</p>
+  <h1 data-i18n="page-title-boxing">BOXING</h1>
+  <p class="subtitle" data-i18n="boxing-subtitle">gloves on.</p>
+  <p class="intro" data-i18n="boxing-intro">not a fitness class. not cardio. boxing. the kind where you learn what your hands are for and your ego becomes optional.</p>
 </header>
 
 <section class="photo-grid" aria-label="Boxing photos">
@@ -355,17 +364,17 @@
 </section>
 
 <section class="section">
-  <h2>WHAT HAPPENS HERE</h2>
+  <h2 data-i18n="boxing-what-happens">WHAT HAPPENS HERE</h2>
   <ul>
-    <li>rounds on the bag</li>
-    <li>combinations</li>
-    <li>footwork</li>
-    <li>pad work</li>
+    <li data-i18n="boxing-list-1">rounds on the bag</li>
+    <li data-i18n="boxing-list-2">combinations</li>
+    <li data-i18n="boxing-list-3">footwork</li>
+    <li data-i18n="boxing-list-4">pad work</li>
   </ul>
 </section>
 
 <div class="statement">
-  <p>the ring remembers.</p>
+  <p data-i18n="boxing-statement">the ring remembers.</p>
 </div>
 
 <!-- the round timer doesn't care about your feelings -->
@@ -374,8 +383,8 @@
     <a href="https://x.com/N3XT3LIT3">X</a>
   </div>
   <div class="footer-row">
-    <a href="#mailing">MAILING LIST</a>
-    <span>BORING STUFF</span>
+    <a href="#mailing" data-i18n="footer-mailing">MAILING LIST</a>
+    <span data-i18n="footer-boring">BORING STUFF</span>
   </div>
 </footer>
 
@@ -399,5 +408,6 @@
     });
   })();
 </script>
+<script src="lang.js"></script>
 </body>
 </html>
