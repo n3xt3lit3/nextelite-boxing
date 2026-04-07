@@ -77,7 +77,7 @@
     // === THE SPACE PAGE ===
     'space-subtitle': { en: 'the gym.', no: 'lokalet.' },
     'space-intro': {
-      en: 'a garage gym above the arctic circle. no memberships. no mirrors for vanity. every piece earned its place.',
+      en: 'a garage gym above the arctic circle. no memberships. no vanity mirrors. every piece earned its place.',
       no: 'et garasjelokale over polarsirkelen. ingen medlemskap. ingen speil for forfengelighet. hvert eneste utstyr fortjente plassen sin.'
     },
     'space-location': { en: 'myre, vesterålen.', no: 'myre, vesterålen.' },
@@ -148,12 +148,12 @@
     },
     'mob-equip-dummy-name': { en: 'the dummy', no: 'dukken' },
     'mob-equip-dummy-desc': {
-      en: 'century bob. it never hits back. that is the point. practice precision when there are no consequences. then carry it into chaos.',
+      en: 'century bob. it never hits back. that\u0027s the point. practice precision when there are no consequences. then carry it into chaos.',
       no: 'century bob. den slår aldri tilbake. det er hele poenget. øv presisjon når det ikke er konsekvenser. så tar du det med inn i kaoset.'
     },
     'mob-equip-speed-name': { en: 'the speed', no: 'farten' },
     'mob-equip-speed-desc': {
-      en: 'meister speed bag. wall-mounted on wood. rhythm is violence made precise. you don\'t hit it. you listen to it.',
+      en: 'meister speed bag. wall-mounted on wood. rhythm is violence made precise. you don\u0027t hit it. you tune into it.',
       no: 'meister speed bag. veggmontert på tre. rytme er vold gjort presist. du slår den ikke. du lytter til den.'
     },
     'mob-equip-wall-name': { en: 'the wall', no: 'veggen' },
@@ -168,7 +168,7 @@
       no: 'boksing er meditasjon med konsekvenser.'
     },
     'mob-boxing-statement-2': {
-      en: 'one room. blue mats. bags that don\'t care about your day. two dogs watching from the corner. this is not a fitness center. this is where you go to remember what discipline feels like.',
+      en: 'one room. blue mats. bags that don\u0027t care about your day. two dogs watching from the corner. this is not a fitness center. this is where you remember what discipline feels like.',
       no: 'ett rom. blå matter. sekker som ikke bryr seg om dagen din. to hunder som ser på fra hjørnet. dette er ikke et treningssenter. dette er dit du går for å huske hva disiplin føles som.'
     },
 
@@ -176,7 +176,7 @@
     'mob-train-rounds': { en: 'rounds', no: 'runder' },
     'mob-train-boxing': { en: 'boxing', no: 'boksing' },
     'mob-train-boxing-desc': {
-      en: 'heavy bag. speed bag. bob. wallbag. reflex stick. combinations until your brain stops narrating and your body takes over. that is the goal.',
+      en: 'heavy bag. speed bag. bob. wallbag. reflex stick. combinations until your brain stops narrating and your body takes over. that\u0027s the goal.',
       no: 'tung sekk. speed bag. bob. veggbag. refleksstav. kombinasjoner til hjernen slutter å kommentere og kroppen tar over. det er målet.'
     },
     'mob-train-circuits': { en: 'circuits', no: 'sirkler' },
@@ -188,7 +188,7 @@
     'mob-train-film': { en: 'film', no: 'film' },
     'mob-train-analysis': { en: 'analysis', no: 'analyse' },
     'mob-train-analysis-desc': {
-      en: 'tripod-recorded sessions. watch yourself. see what you thought you were doing vs. what you actually did. the mirror lies. the camera doesn\'t.',
+      en: 'tripod-recorded sessions. watch yourself back. what you thought you were doing vs. what you actually did. the mirror lies. the camera doesn\u0027t.',
       no: 'økter filmet på stativ. se deg selv. se hva du trodde du gjorde vs. hva du faktisk gjorde. speilet lyver. kameraet gjør ikke det.'
     },
     'mob-train-intro': {
@@ -204,7 +204,7 @@
     },
     'mob-wall-2-name': { en: 'gloves on', no: 'hansker på' },
     'mob-wall-2-desc': {
-      en: 'no spectators. once you are here, you are here. wrap your hands. commit.',
+      en: 'no spectators. once you\u0027re here, you\u0027re here. wrap your hands. commit.',
       no: 'ingen tilskuere. når du er her, er du her. surr hendene. forplikt deg.'
     },
     'mob-wall-3-name': { en: 'no shortcuts', no: 'ingen snarveier' },
@@ -214,18 +214,18 @@
     },
     'mob-wall-4-name': { en: 'the ring remembers', no: 'ringen husker' },
     'mob-wall-4-desc': {
-      en: 'what you do when no one is watching is who you are. the room keeps score.',
+      en: 'what you do when nobody\u0027s watching is who you are. the room keeps score.',
       no: 'det du gjør når ingen ser på er den du er. rommet holder telling.'
     },
 
     // Boxing mobile location
     'mob-location-title': { en: 'myre, vesterålen', no: 'myre, vesterålen' },
     'mob-location-body-1': {
-      en: 'above the arctic circle. where winter is five months of darkness and the gym lights are always on. this is not a destination. this is where the work lives.',
+      en: 'above the arctic circle. winter is five months of darkness and the gym lights stay on. not a destination. this is where the work lives.',
       no: 'over polarsirkelen. der vinteren er fem måneder mørke og lyset i lokalet alltid er på. dette er ikke en destinasjon. dette er der arbeidet bor.'
     },
     'mob-location-body-2': {
-      en: 'nextelite boxing and tagteach. run by nemine steffensen. two dogs on site. they don\'t judge your footwork. much.',
+      en: 'nextelite boxing and tagteach. run by nemine steffensen. two dogs on site. they don\u0027t judge your footwork. much.',
       no: 'nextelite boksing og tagteach. drevet av nemine steffensen. to hunder på stedet. de dømmer ikke fotarbeidet ditt. stort sett.'
     },
     'mob-closing-ring': { en: 'the ring remembers.', no: 'ringen husker.' },
@@ -234,10 +234,10 @@
     'mob-space-speed-desc': { en: 'wall-mounted on wood. rhythm is violence made precise.', no: 'veggmontert på tre. rytme er vold gjort presist.' },
     'mob-space-trx-desc': { en: 'suspension training. no machines. just gravity and intent.', no: 'suspensjonstrening. ingen maskiner. bare tyngdekraft og intensjon.' },
     'mob-space-reflex-desc': { en: 'hand-eye coordination. the thing that doesn\'t care how ready you think you are.', no: 'hånd-øye-koordinasjon. tingen som ikke bryr seg om hvor klar du tror du er.' },
-    'mob-space-jump-desc': { en: 'jump rope collection. the oldest conditioning tool. still the best.', no: 'hopptausamling. det eldste kondisjonsverktøy. fortsatt det beste.' },
+    'mob-space-jump-desc': { en: 'jump rope collection. oldest conditioning tool there is. still the best.', no: 'hopptausamling. det eldste kondisjonsverktøy. fortsatt det beste.' },
     'mob-space-wallbag-desc': { en: 'wall-mounted uppercuts. close range. personal.', no: 'veggmonterte uppercuts. nærdistanse. personlig.' },
     'mob-space-location-body': {
-      en: 'above the arctic circle. where winter is five months of darkness and the gym lights are always on.',
+      en: 'above the arctic circle. winter is five months of darkness and the gym lights stay on.',
       no: 'over polarsirkelen. der vinteren er fem måneder mørke og lyset i lokalet alltid er på.'
     },
     'mob-space-closing': { en: 'every piece earned its place.', no: 'hvert eneste utstyr fortjente plassen sin.' },
@@ -248,7 +248,7 @@
       no: 'den minste lærbare delen. én ting om gangen. ikke mer.'
     },
     'mob-tagteach-step-2-desc': {
-      en: 'the click happens at the exact instant the behavior is correct. timing is everything.',
+      en: 'the click lands at the exact moment the behavior is correct. timing is everything.',
       no: 'klikket skjer i nøyaktig det øyeblikket atferden er korrekt. timing er alt.'
     },
     'mob-tagteach-step-3-desc': {
